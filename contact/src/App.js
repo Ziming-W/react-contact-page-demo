@@ -131,6 +131,8 @@ function App() {
                     <div><strong>Suite:</strong> {user.address.suite}</div>
                     <div><strong>City:</strong> {user.address.city}</div>
                     <div><strong>Zipcode:</strong> {user.address.zipcode}</div>
+                    <div><strong>Lat:</strong> {user.address.geo.lat}</div>
+                    <div><strong>Lng:</strong> {user.address.geo.lng}</div>
                   </div>
                 ))
               }>{user.address.suite}, {user.address.street}, {user.address.city} {user.address.zipcode}</span>
