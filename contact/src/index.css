@@ -1,3 +1,6 @@
+/**
+  * General styles
+  */
 body {
   margin: 0;
   background: linear-gradient(135deg, #e3f2fd, #bbdefb);
@@ -7,9 +10,9 @@ body {
 .contact-page {
   padding: 20px;
   background: white;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 20px auto;
 }
 
@@ -20,6 +23,17 @@ body {
   font-weight: bold;
 }
 
+.search-container {
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+/**
+  * Table styles, and popover styles
+  */
 .table-container {
   border-radius: 10px;
   overflow: hidden;
@@ -49,10 +63,18 @@ span {
 
 .TableCell {
   padding: 10px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .table-header {
   font-weight: bold;
+  text-align: center;
+}
+
+.align-center {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .clickable {
@@ -62,6 +84,7 @@ span {
 }
 
 .popover-content {
+  font-size: 0.9rem;
   padding: 16px;
   max-width: 300px;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -84,10 +107,14 @@ span {
   gap: 16px;
 }
 
+
+/**
+  * Card styles, used in mobile view
+  */
 .card {
   padding: 16px;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
@@ -123,20 +150,39 @@ span {
 
 .card-content .expanded-address {
   display: inline-block;
-  max-width: 300px; /* Allow more room for address */
+  max-width: 300px; 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+/**
+  * Highlighted card styles
+  */
+.highlighted {
+  background-color: yellow;
+}
+
+
+/**
+  * Responsive styles
+  */
 @media (min-width: 769px) {
   .card-container {
     display: none;
+  }
+
+  .search-input{
+    max-width: 300px;
+    height: '50px'; 
   }
 }
 
 @media (max-width: 768px) {
   .table-container {
     display: none;
+  }
+  .search-input{
+    width: 100%;
   }
 }
